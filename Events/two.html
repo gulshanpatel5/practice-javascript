@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const sayGulshan = function(){
+        console.log("Gulshan");
+        
+    }
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "learn java script"
+        
+    }
+
+    
+    const cleartext = setTimeout(changeText, 2000)//  here this function helps to change text at every two second.
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(cleartext)
+            console.log("STOPPED");
+            
+        })
+</script>
+</html>

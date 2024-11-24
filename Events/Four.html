@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shubh.css">
+</head>
+<h1>Random Background color Generator</h1>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+
+const Randomcolour = function(){
+    const hex = '0123456789ABCDEF';
+    let color = '#';
+    for(let i = 0; i< 6;i++){
+        color += hex[Math.floor(Math.random()*16)]
+    }
+    return color;
+    
+};
+let intervalId;
+const startChangingcolor = function() {
+    if(!intervalId){
+        intervalId = setInterval (changebg)
+
+    }
+
+    function changebg(){
+        document.body.style.backgroundColor = Randomcolour(); 
+    } 
+
+}
+
+
+
+
+// console.log(Randomcolour());
+document.querySelector('#start').addEventListener('click',startChangingcolor)
+
+const stopChangingcolor = function(){
+    clearInterval(intervalId)
+    intervalId = null
+}
+document.querySelector('#stop').addEventListener('click',stopChangingcolor)
+
+
+</script>
+</html>

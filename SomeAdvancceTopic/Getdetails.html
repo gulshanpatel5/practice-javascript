@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Get details..</h1>
+<h2></h2>
+<button id="show">show details</button>
+
+
+
+<script>
+
+    const Apidata = function(){
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        // console.log(xhr.readyState);
+        if( xhr.readyState == 4){
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.followers);
+            // console.log(typeof data);
+
+            console.log(data.avatar_url);
+            
+
+            document.querySelector('h1').innerHTML = `followers: ${data.followers}`;
+            document.querySelector('h2').innerHTML = `Profile picture: <img src="${data.avatar_url}" alt="Avatar" width="100">`;
+                        
+        }
+
+    }
+    xhr.send();
+    }
+
+
+    
+
+
+    document.querySelector('#show').addEventListener('click',Apidata)
+    
+
+</script>
+</body>
+</html>

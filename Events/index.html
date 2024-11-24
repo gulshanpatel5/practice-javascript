@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Events in Java Script</title>
+    </head>
+<body style="background-color: #414141 #4c6fd0;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="image">
+            <li><img width="200px" id="Fruit" src="image/fruits.jpg" alt="Fruit"></li>
+            <li><img width="200px" id="apple" src="image/apple.jpg" alt=""></li>
+
+            <li><img width="200px" id="Banana" src="image/Banana.jpg" alt=""></li>
+            <li><img width="200px" id="paint" src="image/paint.jpg" alt=""></li>
+            <li><img width="200px" id="oranges" src="image/orangesimg.jpg" alt=""></li>
+            <li><img width="200px" id="Rock" src="image/ifeoluwa-a-QK_ld7gnwwU-unsplash.jpg" alt=""></li>
+            <li><img width="200px" id="Dice" src="image/pexels-fabianreitmeier-707837.jpg" alt=""></li>
+
+            <li><img width="200px" id= "Tablet" src="image/pexels-alex-green-5699519.jpg" alt=""></li>
+
+            <li><a style="color:rgb(15, 45, 45);" href="http://google.com" id="google">Google</a></li>
+
+    </ul>
+        
+</div>
+    
+</body>
+<script>
+// this the best way for selecting elements. and here event listener is most ejective way.
+        //important for interview.
+        //some important topics for interview in events in java Script:- 
+        // type , timestamp, defaultPrevented
+        // target , toElement, srcElement(imp), currentTarget,
+        // clientX, clientY, screenX, screenY
+        // altKey, ctrlkey, shiftkey, keycode
+        
+        document.getElementById('Rock').addEventListener('click',function(e){
+          console.log(e);
+            
+        },false)
+        
+
+</script>
+</html>
+
+<!-- note Java script is sequentially run language.
+  -->
