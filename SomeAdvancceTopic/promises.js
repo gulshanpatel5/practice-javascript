@@ -77,4 +77,15 @@ promiseFour.then(function(user){
     console.log(error);
     
 })
+promiseFour.then(function(user){
+    console.log(user);
+    return user.username
+    
+}).then(function(username){
+    console.log(username);
+    
+}).catch(function(error){
+    console.log(error);
+    
+})
 // if error true than out:- Error: Larki nakhre waliii,  haha...
