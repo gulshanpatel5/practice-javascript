@@ -161,3 +161,7 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 
 .catch((error)=> console.log(error))// this is run when code is fail.
 // here in this case the good thing is that we are free from try catch aur wait karne ka problem khatam kyo ki hame pata hai ki jab tak .then complete nahi ho gaa .catch nahi kamm kare gaa means phale code ko check kyia jaye ga ki ye sahi hai ya nahi ager haa to thik nahi to wo reject hojaye gaa means catch mai jaye gaa...
+
+
+// here one more important thing is that:-  Fetch() is consider as priority Queue.
+// Thats why here the fetch() part of the code run at the top.
